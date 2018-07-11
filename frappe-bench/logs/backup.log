@@ -1,0 +1,296 @@
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 94, in <module>
+    main()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/decorators.py", line 17, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/__init__.py", line 24, in _func
+    ret = f(frappe._dict(ctx.obj), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/site.py", line 294, in backup
+    odb = scheduled_backup(ignore_files=not with_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, backup_path_private_files=backup_path_private_files, force=True)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 172, in scheduled_backup
+    odb = new_backup(older_than, ignore_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 182, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 48, in get_backup
+    self.set_backup_file_name()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 63, in set_backup_file_name
+    todays_date = now_datetime().strftime('%Y%m%d_%H%M%S')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 121, in now_datetime
+    dt = convert_utc_to_user_timezone(datetime.datetime.utcnow())
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 144, in convert_utc_to_user_timezone
+    return utcnow.astimezone(timezone(get_time_zone()))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 138, in get_time_zone
+    return frappe.cache().get_value("time_zone", _get_time_zone)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 132, in _get_time_zone
+    return frappe.db.get_system_setting('time_zone') or 'Asia/Kolkata'
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 889, in get_system_setting
+    return frappe.cache().get_value("system_settings", _load_system_settings).get(key)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 888, in _load_system_settings
+    return self.get_singles_dict("System Settings")
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 559, in get_singles_dict
+    tabSingles where doctype=%s""", doctype))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 94, in <module>
+    main()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/decorators.py", line 17, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/__init__.py", line 24, in _func
+    ret = f(frappe._dict(ctx.obj), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/site.py", line 294, in backup
+    odb = scheduled_backup(ignore_files=not with_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, backup_path_private_files=backup_path_private_files, force=True)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 172, in scheduled_backup
+    odb = new_backup(older_than, ignore_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 182, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 48, in get_backup
+    self.set_backup_file_name()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 63, in set_backup_file_name
+    todays_date = now_datetime().strftime('%Y%m%d_%H%M%S')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 121, in now_datetime
+    dt = convert_utc_to_user_timezone(datetime.datetime.utcnow())
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 144, in convert_utc_to_user_timezone
+    return utcnow.astimezone(timezone(get_time_zone()))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 138, in get_time_zone
+    return frappe.cache().get_value("time_zone", _get_time_zone)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 132, in _get_time_zone
+    return frappe.db.get_system_setting('time_zone') or 'Asia/Kolkata'
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 889, in get_system_setting
+    return frappe.cache().get_value("system_settings", _load_system_settings).get(key)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 888, in _load_system_settings
+    return self.get_singles_dict("System Settings")
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 559, in get_singles_dict
+    tabSingles where doctype=%s""", doctype))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 94, in <module>
+    main()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/decorators.py", line 17, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/__init__.py", line 24, in _func
+    ret = f(frappe._dict(ctx.obj), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/site.py", line 294, in backup
+    odb = scheduled_backup(ignore_files=not with_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, backup_path_private_files=backup_path_private_files, force=True)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 172, in scheduled_backup
+    odb = new_backup(older_than, ignore_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 182, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 48, in get_backup
+    self.set_backup_file_name()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 63, in set_backup_file_name
+    todays_date = now_datetime().strftime('%Y%m%d_%H%M%S')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 121, in now_datetime
+    dt = convert_utc_to_user_timezone(datetime.datetime.utcnow())
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 144, in convert_utc_to_user_timezone
+    return utcnow.astimezone(timezone(get_time_zone()))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 138, in get_time_zone
+    return frappe.cache().get_value("time_zone", _get_time_zone)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 132, in _get_time_zone
+    return frappe.db.get_system_setting('time_zone') or 'Asia/Kolkata'
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 889, in get_system_setting
+    return frappe.cache().get_value("system_settings", _load_system_settings).get(key)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 888, in _load_system_settings
+    return self.get_singles_dict("System Settings")
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 559, in get_singles_dict
+    tabSingles where doctype=%s""", doctype))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 174, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 94, in <module>
+    main()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/bench_helper.py", line 18, in main
+    click.Group(commands=commands)(prog_name='bench')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 722, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 697, in main
+    rv = self.invoke(ctx)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/core.py", line 535, in invoke
+    return callback(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/click/decorators.py", line 17, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/__init__.py", line 24, in _func
+    ret = f(frappe._dict(ctx.obj), *args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/commands/site.py", line 294, in backup
+    odb = scheduled_backup(ignore_files=not with_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, backup_path_private_files=backup_path_private_files, force=True)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 172, in scheduled_backup
+    odb = new_backup(older_than, ignore_files, backup_path_db=backup_path_db, backup_path_files=backup_path_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 182, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 48, in get_backup
+    self.set_backup_file_name()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/backups.py", line 63, in set_backup_file_name
+    todays_date = now_datetime().strftime('%Y%m%d_%H%M%S')
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 121, in now_datetime
+    dt = convert_utc_to_user_timezone(datetime.datetime.utcnow())
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 144, in convert_utc_to_user_timezone
+    return utcnow.astimezone(timezone(get_time_zone()))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 138, in get_time_zone
+    return frappe.cache().get_value("time_zone", _get_time_zone)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/data.py", line 132, in _get_time_zone
+    return frappe.db.get_system_setting('time_zone') or 'Asia/Kolkata'
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 889, in get_system_setting
+    return frappe.cache().get_value("system_settings", _load_system_settings).get(key)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 72, in get_value
+    val = generator()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 888, in _load_system_settings
+    return self.get_singles_dict("System Settings")
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 559, in get_singles_dict
+    tabSingles where doctype=%s""", doctype))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")

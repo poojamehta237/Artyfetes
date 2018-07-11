@@ -1,0 +1,323 @@
+[ERROR] 2018-07-09 10:54:35,636 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetes.com
+Exception in Enqueue Events for Site artyfetes.com
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:54:35,641 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetesSite
+Exception in Enqueue Events for Site artyfetesSite
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user 'af8859d4ec226a74'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:55:35,738 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetes.com
+Exception in Enqueue Events for Site artyfetes.com
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:55:35,742 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetesSite
+Exception in Enqueue Events for Site artyfetesSite
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user 'af8859d4ec226a74'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:57:05,330 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetes.com
+Exception in Enqueue Events for Site artyfetes.com
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:57:05,339 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetesSite
+Exception in Enqueue Events for Site artyfetesSite
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user 'af8859d4ec226a74'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:58:05,424 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetes.com
+Exception in Enqueue Events for Site artyfetes.com
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:58:05,432 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetesSite
+Exception in Enqueue Events for Site artyfetesSite
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user 'af8859d4ec226a74'@'localhost' (using password: YES)")
+
+[DEBUG] 2018-07-09 10:59:05,570 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artySite
+Queued events for site artySite
+[ERROR] 2018-07-09 10:59:05,576 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetes.com
+Exception in Enqueue Events for Site artyfetes.com
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user '9e367f4b86e61f0f'@'localhost' (using password: YES)")
+
+[ERROR] 2018-07-09 10:59:05,584 | /home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: artyfetesSite
+Exception in Enqueue Events for Site artyfetesSite
+Traceback (most recent call last):
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 88, in enqueue_events_for_site
+    if is_scheduler_disabled():
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 227, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 584, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 136, in sql
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/apps/frappe/frappe/database.py", line 86, in connect
+    charset='utf8mb4', use_unicode = True, conv = conversions)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 598, in connect
+    self._request_authentication()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/indictrans/pooja_workspace/artyfetes_v10/frappe-bench/env/local/lib/python2.7/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user 'af8859d4ec226a74'@'localhost' (using password: YES)")
+

@@ -1,0 +1,12 @@
+2018-07-09 10:32:55,987 INFO getting app erpnext
+2018-07-09 10:32:55,999 INFO git clone ndictrans@192.168.5.16:/home/indictrans/jprashant/artyfetes_v10/frappe-bench/apps/erpnext --branch master --depth 1 --origin upstream
+2018-07-09 10:33:10,794 INFO getting app erpnext
+2018-07-09 10:33:10,805 INFO git clone indictrans@192.168.5.16:/home/indictrans/jprashant/artyfetes_v10/frappe-bench/apps/erpnext --branch master --depth 1 --origin upstream
+2018-07-09 10:36:12,046 INFO installing erpnext
+2018-07-09 10:36:12,047 INFO ./env/bin/pip install -q  -e ./apps/erpnext --no-cache-dir
+2018-07-09 10:37:14,523 INFO getting app artyfetes
+2018-07-09 10:37:14,533 INFO git clone ndictrans@192.168.5.16:/home/indictrans/jprashant/artyfetes_v10/frappe-bench/apps/artyfetes --branch master --depth 1 --origin upstream
+2018-07-09 10:37:28,170 INFO getting app artyfetes
+2018-07-09 10:37:28,179 INFO git clone indictrans@192.168.5.16:/home/indictrans/jprashant/artyfetes_v10/frappe-bench/apps/artyfetes --branch master --depth 1 --origin upstream
+2018-07-09 10:37:32,846 INFO installing artyfetes
+2018-07-09 10:37:32,847 INFO ./env/bin/pip install -q  -e ./apps/artyfetes --no-cache-dir
